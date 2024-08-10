@@ -204,7 +204,7 @@ async def transfer_points(ctx, member_name: str, points: int):
 
     # 사용 횟수 체크
     if user_transfer_counts[user_id]['count'] >= config['송금회수제한']:
-        await ctx.send('하루에 3회 이상 송금할 수 없습니다.')
+        await ctx.send('하루에 2회 이상 송금할 수 없습니다.')
         return
 
     sender_points = user_points.get(sender.id, 0)
